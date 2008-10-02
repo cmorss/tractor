@@ -1,0 +1,490 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 44;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3603DF560E898856004CBA2B /* GradientFill.h in Headers */ = {isa = PBXBuildFile; fileRef = 3603DF540E898856004CBA2B /* GradientFill.h */; };
+		3603DF570E898856004CBA2B /* GradientFill.m in Sources */ = {isa = PBXBuildFile; fileRef = 3603DF550E898856004CBA2B /* GradientFill.m */; };
+		3603DF5B0E898870004CBA2B /* ImageAndTextCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 3603DF590E898870004CBA2B /* ImageAndTextCell.h */; };
+		3603DF5C0E898870004CBA2B /* ImageAndTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3603DF5A0E898870004CBA2B /* ImageAndTextCell.m */; };
+		3603DF610E898A01004CBA2B /* servertreeview.rb in Resources */ = {isa = PBXBuildFile; fileRef = 3603DF5E0E898A01004CBA2B /* servertreeview.rb */; };
+		3603DF620E898A01004CBA2B /* tableprogressindicator.rb in Resources */ = {isa = PBXBuildFile; fileRef = 3603DF5F0E898A01004CBA2B /* tableprogressindicator.rb */; };
+		3603DF630E898A01004CBA2B /* treeview.rb in Resources */ = {isa = PBXBuildFile; fileRef = 3603DF600E898A01004CBA2B /* treeview.rb */; };
+		3603DF870E8DBE14004CBA2B /* TicketView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 3603DF860E8DBE14004CBA2B /* TicketView.rb */; };
+		3603DF8C0E8DC3E9004CBA2B /* TicketsView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 3603DF8B0E8DC3E9004CBA2B /* TicketsView.rb */; };
+		3635DA120E7CB46F00AF50A0 /* Hash.rb in Resources */ = {isa = PBXBuildFile; fileRef = 3635DA110E7CB46F00AF50A0 /* Hash.rb */; };
+		3635DA8F0E7DAB6100AF50A0 /* Repository.rb in Resources */ = {isa = PBXBuildFile; fileRef = 3635DA8D0E7DAB6100AF50A0 /* Repository.rb */; };
+		3635DA900E7DAB6100AF50A0 /* Ticket.rb in Resources */ = {isa = PBXBuildFile; fileRef = 3635DA8E0E7DAB6100AF50A0 /* Ticket.rb */; };
+		363C0E0C0E7762DD0094CCD7 /* Trac.rb in Resources */ = {isa = PBXBuildFile; fileRef = 363C0E0B0E7762DD0094CCD7 /* Trac.rb */; };
+		363C0E390E789A240094CCD7 /* Cache.rb in Resources */ = {isa = PBXBuildFile; fileRef = 363C0E380E789A240094CCD7 /* Cache.rb */; };
+		368C14C30E8097A500D4C5A9 /* migrate in Resources */ = {isa = PBXBuildFile; fileRef = 368C14C00E8097A500D4C5A9 /* migrate */; };
+		36CD18D90E81EB49005C0AED /* Component.rb in Resources */ = {isa = PBXBuildFile; fileRef = 36CD18D10E81EB49005C0AED /* Component.rb */; };
+		36CD18DA0E81EB49005C0AED /* Milestone.rb in Resources */ = {isa = PBXBuildFile; fileRef = 36CD18D20E81EB49005C0AED /* Milestone.rb */; };
+		36CD18DB0E81EB49005C0AED /* Priority.rb in Resources */ = {isa = PBXBuildFile; fileRef = 36CD18D30E81EB49005C0AED /* Priority.rb */; };
+		36CD18DC0E81EB49005C0AED /* Resolution.rb in Resources */ = {isa = PBXBuildFile; fileRef = 36CD18D40E81EB49005C0AED /* Resolution.rb */; };
+		36CD18DD0E81EB49005C0AED /* Severity.rb in Resources */ = {isa = PBXBuildFile; fileRef = 36CD18D50E81EB49005C0AED /* Severity.rb */; };
+		36CD18DE0E81EB49005C0AED /* TicketStatus.rb in Resources */ = {isa = PBXBuildFile; fileRef = 36CD18D60E81EB49005C0AED /* TicketStatus.rb */; };
+		36CD18DF0E81EB49005C0AED /* TicketType.rb in Resources */ = {isa = PBXBuildFile; fileRef = 36CD18D70E81EB49005C0AED /* TicketType.rb */; };
+		36CD18E00E81EB49005C0AED /* Version.rb in Resources */ = {isa = PBXBuildFile; fileRef = 36CD18D80E81EB49005C0AED /* Version.rb */; };
+		36CD1A000E845ED4005C0AED /* AppController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 36CD19FF0E845ED4005C0AED /* AppController.rb */; };
+		36CD1A560E86C606005C0AED /* MetadataController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 36CD1A540E86C606005C0AED /* MetadataController.rb */; };
+		36CD1A570E86C606005C0AED /* TicketsController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 36CD1A550E86C606005C0AED /* TicketsController.rb */; };
+		36CD1A5A0E86C62E005C0AED /* MetadataPresenter.rb in Resources */ = {isa = PBXBuildFile; fileRef = 36CD1A590E86C62E005C0AED /* MetadataPresenter.rb */; };
+		36FA386D0E930FAE005E1EEA /* TicketsCollectionView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 36FA386C0E930FAE005E1EEA /* TicketsCollectionView.rb */; };
+		36FA38700E931163005E1EEA /* SelectedTicketView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 36FA386F0E931163005E1EEA /* SelectedTicketView.rb */; };
+		36FA38750E93ED08005E1EEA /* Color.h in Headers */ = {isa = PBXBuildFile; fileRef = 36FA38730E93ED08005E1EEA /* Color.h */; };
+		36FA38760E93ED08005E1EEA /* Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FA38740E93ED08005E1EEA /* Color.m */; };
+		36FA38970E943B47005E1EEA /* TicketCollectionViewItem.rb in Resources */ = {isa = PBXBuildFile; fileRef = 36FA38960E943B47005E1EEA /* TicketCollectionViewItem.rb */; };
+		36FA38BC0E9537F0005E1EEA /* CollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 36FA38B80E9537F0005E1EEA /* CollectionView.h */; };
+		36FA38BD0E9537F0005E1EEA /* CollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FA38B90E9537F0005E1EEA /* CollectionView.m */; };
+		36FA38BE0E9537F0005E1EEA /* CollectionViewItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 36FA38BA0E9537F0005E1EEA /* CollectionViewItem.h */; };
+		36FA38BF0E9537F0005E1EEA /* CollectionViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FA38BB0E9537F0005E1EEA /* CollectionViewItem.m */; };
+		4DDCA7060ACC9A6100E082CE /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		4DDCA7070ACC9A6100E082CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		4DDCA7080ACC9A6100E082CE /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = E8F5E25803AEB7C803A81C6F /* rb_main.rb */; };
+		4DDCA70A0ACC9A6100E082CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		4DDCA70C0ACC9A6100E082CE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		4DDCA70D0ACC9A6100E082CE /* RubyCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8F5E24E03AEB6EC03A81C6F /* RubyCocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		361C34C60E7DEF31001A78DA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		3603DF540E898856004CBA2B /* GradientFill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientFill.h; sourceTree = "<group>"; };
+		3603DF550E898856004CBA2B /* GradientFill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientFill.m; sourceTree = "<group>"; };
+		3603DF590E898870004CBA2B /* ImageAndTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageAndTextCell.h; sourceTree = "<group>"; };
+		3603DF5A0E898870004CBA2B /* ImageAndTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageAndTextCell.m; sourceTree = "<group>"; };
+		3603DF5E0E898A01004CBA2B /* servertreeview.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = servertreeview.rb; sourceTree = "<group>"; };
+		3603DF5F0E898A01004CBA2B /* tableprogressindicator.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = tableprogressindicator.rb; sourceTree = "<group>"; };
+		3603DF600E898A01004CBA2B /* treeview.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = treeview.rb; sourceTree = "<group>"; };
+		3603DF860E8DBE14004CBA2B /* TicketView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = TicketView.rb; sourceTree = "<group>"; };
+		3603DF8B0E8DC3E9004CBA2B /* TicketsView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = TicketsView.rb; sourceTree = "<group>"; };
+		3635DA110E7CB46F00AF50A0 /* Hash.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Hash.rb; sourceTree = "<group>"; };
+		3635DA8D0E7DAB6100AF50A0 /* Repository.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Repository.rb; sourceTree = "<group>"; };
+		3635DA8E0E7DAB6100AF50A0 /* Ticket.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Ticket.rb; sourceTree = "<group>"; };
+		363C0E0B0E7762DD0094CCD7 /* Trac.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Trac.rb; sourceTree = "<group>"; };
+		363C0E380E789A240094CCD7 /* Cache.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Cache.rb; sourceTree = "<group>"; };
+		368C14C00E8097A500D4C5A9 /* migrate */ = {isa = PBXFileReference; lastKnownFileType = folder; path = migrate; sourceTree = "<group>"; };
+		36CD18D10E81EB49005C0AED /* Component.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Component.rb; sourceTree = "<group>"; };
+		36CD18D20E81EB49005C0AED /* Milestone.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Milestone.rb; sourceTree = "<group>"; };
+		36CD18D30E81EB49005C0AED /* Priority.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Priority.rb; sourceTree = "<group>"; };
+		36CD18D40E81EB49005C0AED /* Resolution.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Resolution.rb; sourceTree = "<group>"; };
+		36CD18D50E81EB49005C0AED /* Severity.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Severity.rb; sourceTree = "<group>"; };
+		36CD18D60E81EB49005C0AED /* TicketStatus.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = TicketStatus.rb; sourceTree = "<group>"; };
+		36CD18D70E81EB49005C0AED /* TicketType.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = TicketType.rb; sourceTree = "<group>"; };
+		36CD18D80E81EB49005C0AED /* Version.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Version.rb; sourceTree = "<group>"; };
+		36CD19FF0E845ED4005C0AED /* AppController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = AppController.rb; sourceTree = "<group>"; };
+		36CD1A540E86C606005C0AED /* MetadataController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = MetadataController.rb; sourceTree = "<group>"; };
+		36CD1A550E86C606005C0AED /* TicketsController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = TicketsController.rb; sourceTree = "<group>"; };
+		36CD1A590E86C62E005C0AED /* MetadataPresenter.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = MetadataPresenter.rb; sourceTree = "<group>"; };
+		36FA386C0E930FAE005E1EEA /* TicketsCollectionView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = TicketsCollectionView.rb; sourceTree = "<group>"; };
+		36FA386F0E931163005E1EEA /* SelectedTicketView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = SelectedTicketView.rb; sourceTree = "<group>"; };
+		36FA38730E93ED08005E1EEA /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
+		36FA38740E93ED08005E1EEA /* Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Color.m; sourceTree = "<group>"; };
+		36FA38960E943B47005E1EEA /* TicketCollectionViewItem.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = TicketCollectionViewItem.rb; sourceTree = "<group>"; };
+		36FA38B80E9537F0005E1EEA /* CollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionView.h; sourceTree = "<group>"; };
+		36FA38B90E9537F0005E1EEA /* CollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionView.m; sourceTree = "<group>"; };
+		36FA38BA0E9537F0005E1EEA /* CollectionViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewItem.h; sourceTree = "<group>"; };
+		36FA38BB0E9537F0005E1EEA /* CollectionViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewItem.m; sourceTree = "<group>"; };
+		4DDCA7110ACC9A6100E082CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DDCA7120ACC9A6100E082CE /* Tractor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tractor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8F5E24E03AEB6EC03A81C6F /* RubyCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RubyCocoa.framework; path = /System/Library/Frameworks/RubyCocoa.framework; sourceTree = "<absolute>"; };
+		E8F5E25803AEB7C803A81C6F /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4DDCA70B0ACC9A6100E082CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DDCA70C0ACC9A6100E082CE /* Cocoa.framework in Frameworks */,
+				4DDCA70D0ACC9A6100E082CE /* RubyCocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				36CD1A580E86C62E005C0AED /* views */,
+				36CD1A520E86C5DF005C0AED /* controllers */,
+				3635DA8C0E7DAB6100AF50A0 /* models */,
+				3635DA100E7CB46F00AF50A0 /* Utility */,
+				363C0E0B0E7762DD0094CCD7 /* Trac.rb */,
+				363C0E380E789A240094CCD7 /* Cache.rb */,
+				36CD19FF0E845ED4005C0AED /* AppController.rb */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				E8F5E24E03AEB6EC03A81C6F /* RubyCocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DDCA7120ACC9A6100E082CE /* Tractor.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* Tractor */ = {
+			isa = PBXGroup;
+			children = (
+				368C14C00E8097A500D4C5A9 /* migrate */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				4DDCA7110ACC9A6100E082CE /* Info.plist */,
+			);
+			name = Tractor;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				36FA38B80E9537F0005E1EEA /* CollectionView.h */,
+				36FA38B90E9537F0005E1EEA /* CollectionView.m */,
+				36FA38BA0E9537F0005E1EEA /* CollectionViewItem.h */,
+				36FA38BB0E9537F0005E1EEA /* CollectionViewItem.m */,
+				3603DF590E898870004CBA2B /* ImageAndTextCell.h */,
+				3603DF5A0E898870004CBA2B /* ImageAndTextCell.m */,
+				3603DF540E898856004CBA2B /* GradientFill.h */,
+				3603DF550E898856004CBA2B /* GradientFill.m */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+				E8F5E25803AEB7C803A81C6F /* rb_main.rb */,
+				36FA38730E93ED08005E1EEA /* Color.h */,
+				36FA38740E93ED08005E1EEA /* Color.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3635DA100E7CB46F00AF50A0 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				3635DA110E7CB46F00AF50A0 /* Hash.rb */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		3635DA8C0E7DAB6100AF50A0 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				36CD18D10E81EB49005C0AED /* Component.rb */,
+				36CD18D20E81EB49005C0AED /* Milestone.rb */,
+				36CD18D30E81EB49005C0AED /* Priority.rb */,
+				36CD18D40E81EB49005C0AED /* Resolution.rb */,
+				36CD18D50E81EB49005C0AED /* Severity.rb */,
+				36CD18D60E81EB49005C0AED /* TicketStatus.rb */,
+				36CD18D70E81EB49005C0AED /* TicketType.rb */,
+				36CD18D80E81EB49005C0AED /* Version.rb */,
+				3635DA8D0E7DAB6100AF50A0 /* Repository.rb */,
+				3635DA8E0E7DAB6100AF50A0 /* Ticket.rb */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		36CD1A520E86C5DF005C0AED /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				36CD1A540E86C606005C0AED /* MetadataController.rb */,
+				36CD1A550E86C606005C0AED /* TicketsController.rb */,
+				36FA38960E943B47005E1EEA /* TicketCollectionViewItem.rb */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		36CD1A580E86C62E005C0AED /* views */ = {
+			isa = PBXGroup;
+			children = (
+				3603DF5E0E898A01004CBA2B /* servertreeview.rb */,
+				3603DF5F0E898A01004CBA2B /* tableprogressindicator.rb */,
+				3603DF600E898A01004CBA2B /* treeview.rb */,
+				36CD1A590E86C62E005C0AED /* MetadataPresenter.rb */,
+				3603DF860E8DBE14004CBA2B /* TicketView.rb */,
+				3603DF8B0E8DC3E9004CBA2B /* TicketsView.rb */,
+				36FA386C0E930FAE005E1EEA /* TicketsCollectionView.rb */,
+				36FA386F0E931163005E1EEA /* SelectedTicketView.rb */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4DDCA7040ACC9A6100E082CE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3603DF560E898856004CBA2B /* GradientFill.h in Headers */,
+				3603DF5B0E898870004CBA2B /* ImageAndTextCell.h in Headers */,
+				36FA38750E93ED08005E1EEA /* Color.h in Headers */,
+				36FA38BC0E9537F0005E1EEA /* CollectionView.h in Headers */,
+				36FA38BE0E9537F0005E1EEA /* CollectionViewItem.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4DDCA7030ACC9A6100E082CE /* Tractor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DDCA70E0ACC9A6100E082CE /* Build configuration list for PBXNativeTarget "Tractor" */;
+			buildPhases = (
+				4DDCA7040ACC9A6100E082CE /* Headers */,
+				4DDCA7050ACC9A6100E082CE /* Resources */,
+				4DDCA7090ACC9A6100E082CE /* Sources */,
+				4DDCA70B0ACC9A6100E082CE /* Frameworks */,
+				361C34C60E7DEF31001A78DA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tractor;
+			productInstallPath = "$(HOME)/Applications";
+			productName = Tractor;
+			productReference = 4DDCA7120ACC9A6100E082CE /* Tractor.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4D7A7B570ABF745500C2D4C0 /* Build configuration list for PBXProject "Tractor" */;
+			compatibilityVersion = "Xcode 3.0";
+			hasScannedForEncodings = 0;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* Tractor */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4DDCA7030ACC9A6100E082CE /* Tractor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4DDCA7050ACC9A6100E082CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DDCA7060ACC9A6100E082CE /* MainMenu.nib in Resources */,
+				4DDCA7070ACC9A6100E082CE /* InfoPlist.strings in Resources */,
+				4DDCA7080ACC9A6100E082CE /* rb_main.rb in Resources */,
+				363C0E0C0E7762DD0094CCD7 /* Trac.rb in Resources */,
+				363C0E390E789A240094CCD7 /* Cache.rb in Resources */,
+				3635DA120E7CB46F00AF50A0 /* Hash.rb in Resources */,
+				3635DA8F0E7DAB6100AF50A0 /* Repository.rb in Resources */,
+				3635DA900E7DAB6100AF50A0 /* Ticket.rb in Resources */,
+				368C14C30E8097A500D4C5A9 /* migrate in Resources */,
+				36CD18D90E81EB49005C0AED /* Component.rb in Resources */,
+				36CD18DA0E81EB49005C0AED /* Milestone.rb in Resources */,
+				36CD18DB0E81EB49005C0AED /* Priority.rb in Resources */,
+				36CD18DC0E81EB49005C0AED /* Resolution.rb in Resources */,
+				36CD18DD0E81EB49005C0AED /* Severity.rb in Resources */,
+				36CD18DE0E81EB49005C0AED /* TicketStatus.rb in Resources */,
+				36CD18DF0E81EB49005C0AED /* TicketType.rb in Resources */,
+				36CD18E00E81EB49005C0AED /* Version.rb in Resources */,
+				36CD1A000E845ED4005C0AED /* AppController.rb in Resources */,
+				36CD1A560E86C606005C0AED /* MetadataController.rb in Resources */,
+				36CD1A570E86C606005C0AED /* TicketsController.rb in Resources */,
+				36CD1A5A0E86C62E005C0AED /* MetadataPresenter.rb in Resources */,
+				3603DF610E898A01004CBA2B /* servertreeview.rb in Resources */,
+				3603DF620E898A01004CBA2B /* tableprogressindicator.rb in Resources */,
+				3603DF630E898A01004CBA2B /* treeview.rb in Resources */,
+				3603DF870E8DBE14004CBA2B /* TicketView.rb in Resources */,
+				3603DF8C0E8DC3E9004CBA2B /* TicketsView.rb in Resources */,
+				36FA386D0E930FAE005E1EEA /* TicketsCollectionView.rb in Resources */,
+				36FA38700E931163005E1EEA /* SelectedTicketView.rb in Resources */,
+				36FA38970E943B47005E1EEA /* TicketCollectionViewItem.rb in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4DDCA7090ACC9A6100E082CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DDCA70A0ACC9A6100E082CE /* main.m in Sources */,
+				3603DF570E898856004CBA2B /* GradientFill.m in Sources */,
+				3603DF5C0E898870004CBA2B /* ImageAndTextCell.m in Sources */,
+				36FA38760E93ED08005E1EEA /* Color.m in Sources */,
+				36FA38BD0E9537F0005E1EEA /* CollectionView.m in Sources */,
+				36FA38BF0E9537F0005E1EEA /* CollectionViewItem.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4D7A7B580ABF745500C2D4C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+			};
+			name = Debug;
+		};
+		4D7A7B590ABF745500C2D4C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+			};
+			name = Release;
+		};
+		4DDCA70F0ACC9A6100E082CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+					"\"$(SRCROOT)/../../Library/Frameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = Tractor;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		4DDCA7100ACC9A6100E082CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+					"\"$(SRCROOT)/../../Library/Frameworks\"",
+				);
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = Tractor;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4D7A7B570ABF745500C2D4C0 /* Build configuration list for PBXProject "Tractor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D7A7B580ABF745500C2D4C0 /* Debug */,
+				4D7A7B590ABF745500C2D4C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DDCA70E0ACC9A6100E082CE /* Build configuration list for PBXNativeTarget "Tractor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DDCA70F0ACC9A6100E082CE /* Debug */,
+				4DDCA7100ACC9A6100E082CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

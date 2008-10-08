@@ -14,11 +14,18 @@
 
 @end
 
+@protocol CollectionViewDelegate <NSObject>
+
+- (CollectionViewItem *)collectionViewItemAt: (int)index;
+- (int)numberOfRows;
+- (void)drawComplete;
+@end
 
 @interface CollectionView : NSView
 {
    IBOutlet id<CollectionViewTarget> target;
    NSMutableArray *items;
+   id<CollectionViewDelegate> collectionViewDelegate;
    BOOL needsLayout;
 }
 
@@ -27,9 +34,7 @@
 - (void)removeAllItems;
 - (int)numberOfItems;
 - (NSArray *)selectedIndexes;
-
 @end
-
 
 @interface CollectionViewItem : NSView
 {

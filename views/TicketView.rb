@@ -8,10 +8,11 @@
 
 require 'osx/cocoa'
 
-class TicketView <  OSX::NSView
-
-  attr_writer :selected
+class TicketView <  TRTicketView
   
+  attr_writer  :selected
+	kvc_accessor :ticket
+
   class << self
 
     def gradient
@@ -38,9 +39,9 @@ class TicketView <  OSX::NSView
       start_color = Color.colorFromHexRGB(start)
       finish_color = Color.colorFromHexRGB(finish)
       NSGradient.alloc.initWithStartingColor_endingColor(start_color, finish_color)      
-    end    
+    end
   end
-
+  
   def initWithFrame(frame)
     super_initWithFrame(frame)
     # Initialization code here.
@@ -48,33 +49,52 @@ class TicketView <  OSX::NSView
   end
 
   def ticket=(ticket)
-    @ticket = ticket
+    @ticket = ticket    
+    self.idField.stringValue = @ticket.ticket_id
+    # self.summaryField.bind_toObject_withKeyPath_options('value', @ticket, 'summary', nil)
   end
 
   def dealloc
     super_dealloc
-    @id_field.dealloc if @id_field
-    @summary_field.dealloc if @summary_field
+    self.id_field.dealloc if self.id_field
+    self.summary_field.dealloc if self.summary_field
     ticket = nil
   end
-
+  
   def drawRect(rect)
-    $stderr.puts "drawing..."
+    # $stderr.puts "drawing for ticket #{@ticket.ticket_id}"
     super_drawRect(rect)
-
+    
+    $stderr.puts "subviews: #{subviews.size}"
+    OSX::NSColor.blueColor.set
+    subviews.each do |v|
+      OSX::NSRectFill(OSX::NSRect.new(v.frame.origin.x, 
+            v.frame.origin.y, v.bounds.width, v.bounds.height))
+      # v.drawRect(OSX::NSRect.new(v.frame.origin.x, 
+      #       v.frame.origin.y, v.bounds.width, v.bounds.height))
+    end
+    
+    # $stderr.puts "idfield width: #{idField.bounds.width}, x: #{idField.frame.origin.x}, value: #{idField.stringValue}"
     clipShape = OSX::NSBezierPath.bezierPath;
     box = OSX::NSRect.new(bounds.x + 10, bounds.y + 1, bounds.width - 30, bounds.height)
 
     return if box.x < 0 || box.y < 0 || box.height <= 0 || box.width <= 0 
 
     clipShape.appendBezierPathWithRoundedRect_xRadius_yRadius(box, 5, 5)
-
     TicketView.gradient[@selected ? 'selected' : 'background'].drawInBezierPath_angle(clipShape,90.0)
 
+    # Draw the priority
     box = OSX::NSRect.new(bounds.x + box.width + 3, box.y+2, 6, box.height - 4)
     clipShape = OSX::NSBezierPath.bezierPath;
     clipShape.appendBezierPathWithRoundedRect_xRadius_yRadius(box, 5, 5)
     TicketView.colors[@ticket.priority || 'minor'].set
     clipShape.fill
+    
+    # Summary field there?
+    clipShape = OSX::NSBezierPath.bezierPath;    
+    v = summaryField
+    box = OSX::NSRect.new(v.frame.origin.x, v.frame.origin.y, v.bounds.width, v.bounds.height)
+    clipShape.appendBezierPathWithRoundedRect_xRadius_yRadius(box, 4, 4)
+    clipShape.fill    
   end
 end

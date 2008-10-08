@@ -32,7 +32,6 @@ class Ticket < ActiveRecord::Base
       "foo"
     end
     
-    
     def load_from_trac(id)
       results = trac.ticket(:get, id)
       Ticket.createWithAttributes(results.merge(:id => id).to_NSDictionary)
@@ -117,11 +116,15 @@ class Ticket < ActiveRecord::Base
     def load_from_cache(id)
       Cache.get(id)
     end
-  
   end
 
+  def ticket_id
+    puts "ticket_id accessed #{super}"
+    super
+  end
+  
 	def init(opts)
-	  super()
+	  super
 	  @id = opts[:id]
 	  self.attributes = opts[:attributes] || {}
 	  self
@@ -132,9 +135,4 @@ class Ticket < ActiveRecord::Base
       send("#{attr.to_sym}=", attrs[attr])
     end
   end
-
-	def cache
-	  Cache.put(id, self)
-	  self
-	end
 end

@@ -21,14 +21,6 @@ class TicketsCollectionView <  OSX::NSCollectionView
   
   def newItemForRepresentedObject(ticket)
     super_newItemForRepresentedObject(ticket)
-    # if (ticket.id != 1)
-    #   super_newItemForRepresentedObject(ticket)
-    # else
-    #   vi= TicketCollectionViewItem.alloc.init
-    #   vi.view = SelectedTicketView.alloc.initWithFrame(frame)
-    #   vi.setRepresentedObject(ticket)
-    #   vi
-    # end
   end
   
   def drawRect(rect)

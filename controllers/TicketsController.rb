@@ -8,10 +8,12 @@
 
 require 'osx/cocoa'
 
-class TicketsController < OSX::NSWindowController
-	ib_outlet :ticketsView
+class TicketsController < ActiveRecordSetController
+
+  ib_outlet :view
 	ib_action :refresh
 	ib_action :select
+	ib_action :do_foo
 	
 	kvc_accessor :tickets
   
@@ -32,14 +34,18 @@ class TicketsController < OSX::NSWindowController
   def refresh(sender)
     # repository.sync_tickets
     @tickets = repository.tickets.find(:all, :limit => 10).to_activerecord_proxies
-    log "Tickets.size = #{@tickets.size}"
-    @ticketsView.content = @tickets
+    self.content = @tickets
+        
+    @tickets.each do |ticket|
+      log "ticket.class = #{ticket.class.name}"
+      @view.add_row_for_ticket(ticket)
+    end
+    
+    @view.display
   end
-  
-  def refreshcomplete(tickets)
-    log "refresh complete called..."
-    @tickets = tickets.dup
-    @tableView.reloadData
+
+  def do_foo(sender)
+    @tickets.each {|t| t.ticket_id = 'foo'}
   end
   
   private #################################################################

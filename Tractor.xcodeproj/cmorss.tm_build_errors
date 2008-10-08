@@ -1,4 +1,5 @@
-/Users/cmorss/work/TractorApp/CollectionView.m|19|error: cannot find interface declaration for ‘CollectionView’
-/Users/cmorss/work/TractorApp/CollectionViewItem.m|15|error: syntax error before ‘CollectionView’
-/Users/cmorss/work/TractorApp/CollectionViewItem.m|16|fatal error: method definition not in @implementation context
-{standard input}|32|FATAL:.abort  detected.  Assembly stopping.
+/Users/cmorss/work/TractorApp/TicketView.xib|6|note: This view overlaps one of its siblings.
+/Users/cmorss/work/TractorApp/TicketView.xib|28|note: This view is clipped by its superview.
+/Users/cmorss/work/TractorApp/TicketView.xib|5|note: This view overlaps one of its siblings.
+/Users/cmorss/work/TractorApp/TicketView.xib|3|note: This view overlaps one of its siblings.
+/Users/cmorss/work/TractorApp/TicketView.xib|3|note: This view overlaps one of its siblings.

@@ -1,6 +1,4 @@
 #import "CollectionView.h"
-#import "CollectionViewItem.h"
-
 
 static const float DRAG_START_DISTANCE = 10;
 static const float DRAG_IMAGE_ALPHA = 0.5;
@@ -157,6 +155,7 @@ PointDistance(NSPoint start,
                                blue:229.0/255.0
                               alpha:1.0] set];
    NSRectFill([self bounds]);
+   [collectionViewDelegate drawComplete];
 }
 
 
@@ -165,6 +164,14 @@ PointDistance(NSPoint start,
 {
    // ASSERT(item);
    [items insertObject:item atIndex:index];
+   [item setAutoresizingMask:NSViewWidthSizable | NSViewMinYMargin];
+   [self addSubview:item];
+   [self setNeedsLayout:YES];
+}
+
+- (void)addItem: (CollectionViewItem *)item
+{
+   [items addObject:item];
    [item setAutoresizingMask:NSViewWidthSizable | NSViewMinYMargin];
    [self addSubview:item];
    [self setNeedsLayout:YES];
@@ -218,16 +225,28 @@ PointDistance(NSPoint start,
    needsLayout = flag;
 }
 
-
 - (void)performLayout
 {
    // Calculate the total height.
    float myHeight = 0;
-   NSEnumerator *e = [items objectEnumerator];
+   int rowCount = [collectionViewDelegate numberOfRows];
+
+   int i;
    CollectionViewItem *item;
-   while ((item = [e nextObject])) {
-      myHeight += [item frame].size.height;
+   NSMutableArray *collectionViewItems = [[[NSMutableArray alloc] init] autorelease];
+   
+   for (i = 0;  i < rowCount; i++) {
+     // item = [collectionViewDelegate collectionViewItemAt:i];
+     item = [items objectAtIndex:i];
+     [collectionViewItems addObject:item];
+     myHeight += [item frame].size.height;     
    }
+
+   // NSEnumerator *e = [items objectEnumerator];
+   // CollectionViewItem *item;
+   // while ((item = [e nextObject])) {
+   //    myHeight += [item frame].size.height;
+   // }
 
    // Resize the collection view to fit.
    NSRect myFrame = [self frame];
@@ -238,7 +257,7 @@ PointDistance(NSPoint start,
 
    // Layout all the items.
    float yPos = 0;
-   e = [items objectEnumerator];
+   NSEnumerator *e = [collectionViewItems objectEnumerator];
    while ((item = [e nextObject])) {
       NSRect oldItemFrame = [item frame];
       NSRect newItemFrame;
@@ -282,10 +301,9 @@ PointDistance(NSPoint start,
                                                   NSFilenamesPboardType,
                                                   nil]
                   owner:self];
-   [pboard setPropertyList:dragIndexes
-                   forType:DRAG_ITEM_TYPE];
-   [pboard setPropertyList:[self filePathsForIndexes:dragIndexes]
-                   forType:NSFilenamesPboardType];
+
+   [pboard setPropertyList:dragIndexes forType:DRAG_ITEM_TYPE];
+   [pboard setPropertyList:[self filePathsForIndexes:dragIndexes] forType:NSFilenamesPboardType];
 
    // Generate the drag image from the dragged items.
    NSPoint dragPos;

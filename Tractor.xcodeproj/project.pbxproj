@@ -41,8 +41,10 @@
 		36FA38970E943B47005E1EEA /* TicketCollectionViewItem.rb in Resources */ = {isa = PBXBuildFile; fileRef = 36FA38960E943B47005E1EEA /* TicketCollectionViewItem.rb */; };
 		36FA38BC0E9537F0005E1EEA /* CollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 36FA38B80E9537F0005E1EEA /* CollectionView.h */; };
 		36FA38BD0E9537F0005E1EEA /* CollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FA38B90E9537F0005E1EEA /* CollectionView.m */; };
-		36FA38BE0E9537F0005E1EEA /* CollectionViewItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 36FA38BA0E9537F0005E1EEA /* CollectionViewItem.h */; };
-		36FA38BF0E9537F0005E1EEA /* CollectionViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FA38BB0E9537F0005E1EEA /* CollectionViewItem.m */; };
+		36FA39660E9986B6005E1EEA /* RowsView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 36FA39650E9986B6005E1EEA /* RowsView.rb */; };
+		36FA39710E9C345F005E1EEA /* TRTicketView.h in Headers */ = {isa = PBXBuildFile; fileRef = 36FA396F0E9C345F005E1EEA /* TRTicketView.h */; };
+		36FA39720E9C345F005E1EEA /* TRTicketView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FA39700E9C345F005E1EEA /* TRTicketView.m */; };
+		36FA39DB0E9C40B3005E1EEA /* TicketView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36FA39DA0E9C40B3005E1EEA /* TicketView.xib */; };
 		4DDCA7060ACC9A6100E082CE /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		4DDCA7070ACC9A6100E082CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		4DDCA7080ACC9A6100E082CE /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = E8F5E25803AEB7C803A81C6F /* rb_main.rb */; };
@@ -104,8 +106,10 @@
 		36FA38960E943B47005E1EEA /* TicketCollectionViewItem.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = TicketCollectionViewItem.rb; sourceTree = "<group>"; };
 		36FA38B80E9537F0005E1EEA /* CollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionView.h; sourceTree = "<group>"; };
 		36FA38B90E9537F0005E1EEA /* CollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionView.m; sourceTree = "<group>"; };
-		36FA38BA0E9537F0005E1EEA /* CollectionViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewItem.h; sourceTree = "<group>"; };
-		36FA38BB0E9537F0005E1EEA /* CollectionViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewItem.m; sourceTree = "<group>"; };
+		36FA39650E9986B6005E1EEA /* RowsView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = RowsView.rb; sourceTree = "<group>"; };
+		36FA396F0E9C345F005E1EEA /* TRTicketView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRTicketView.h; sourceTree = "<group>"; };
+		36FA39700E9C345F005E1EEA /* TRTicketView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRTicketView.m; sourceTree = "<group>"; };
+		36FA39DA0E9C40B3005E1EEA /* TicketView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketView.xib; sourceTree = "<group>"; };
 		4DDCA7110ACC9A6100E082CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DDCA7120ACC9A6100E082CE /* Tractor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tractor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8F5E24E03AEB6EC03A81C6F /* RubyCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RubyCocoa.framework; path = /System/Library/Frameworks/RubyCocoa.framework; sourceTree = "<absolute>"; };
@@ -184,8 +188,6 @@
 			children = (
 				36FA38B80E9537F0005E1EEA /* CollectionView.h */,
 				36FA38B90E9537F0005E1EEA /* CollectionView.m */,
-				36FA38BA0E9537F0005E1EEA /* CollectionViewItem.h */,
-				36FA38BB0E9537F0005E1EEA /* CollectionViewItem.m */,
 				3603DF590E898870004CBA2B /* ImageAndTextCell.h */,
 				3603DF5A0E898870004CBA2B /* ImageAndTextCell.m */,
 				3603DF540E898856004CBA2B /* GradientFill.h */,
@@ -194,6 +196,8 @@
 				E8F5E25803AEB7C803A81C6F /* rb_main.rb */,
 				36FA38730E93ED08005E1EEA /* Color.h */,
 				36FA38740E93ED08005E1EEA /* Color.m */,
+				36FA396F0E9C345F005E1EEA /* TRTicketView.h */,
+				36FA39700E9C345F005E1EEA /* TRTicketView.m */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -203,6 +207,7 @@
 			children = (
 				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				36FA39DA0E9C40B3005E1EEA /* TicketView.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -254,6 +259,7 @@
 		36CD1A580E86C62E005C0AED /* views */ = {
 			isa = PBXGroup;
 			children = (
+				36FA39650E9986B6005E1EEA /* RowsView.rb */,
 				3603DF5E0E898A01004CBA2B /* servertreeview.rb */,
 				3603DF5F0E898A01004CBA2B /* tableprogressindicator.rb */,
 				3603DF600E898A01004CBA2B /* treeview.rb */,
@@ -277,7 +283,7 @@
 				3603DF5B0E898870004CBA2B /* ImageAndTextCell.h in Headers */,
 				36FA38750E93ED08005E1EEA /* Color.h in Headers */,
 				36FA38BC0E9537F0005E1EEA /* CollectionView.h in Headers */,
-				36FA38BE0E9537F0005E1EEA /* CollectionViewItem.h in Headers */,
+				36FA39710E9C345F005E1EEA /* TRTicketView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +361,8 @@
 				36FA386D0E930FAE005E1EEA /* TicketsCollectionView.rb in Resources */,
 				36FA38700E931163005E1EEA /* SelectedTicketView.rb in Resources */,
 				36FA38970E943B47005E1EEA /* TicketCollectionViewItem.rb in Resources */,
+				36FA39660E9986B6005E1EEA /* RowsView.rb in Resources */,
+				36FA39DB0E9C40B3005E1EEA /* TicketView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +378,7 @@
 				3603DF5C0E898870004CBA2B /* ImageAndTextCell.m in Sources */,
 				36FA38760E93ED08005E1EEA /* Color.m in Sources */,
 				36FA38BD0E9537F0005E1EEA /* CollectionView.m in Sources */,
-				36FA38BF0E9537F0005E1EEA /* CollectionViewItem.m in Sources */,
+				36FA39720E9C345F005E1EEA /* TRTicketView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

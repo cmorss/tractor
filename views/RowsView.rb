@@ -6,6 +6,10 @@ class RowsView < OSX::NSView
     @layout_needed = true
   end
   
+  def isFlipped
+    true
+  end
+  
   def performLayout
     my_height = 0
     subviews.each do |row|
@@ -13,9 +17,9 @@ class RowsView < OSX::NSView
     end
     
     my_frame = self.frame
-    setFrameSize(OSX::NSMakeSize(my_frame.size.width, my_height))  
+    setFrameSize(OSX::NSMakeSize(my_frame.size.width, [my_height, superview.frame.size.height].max))  
     
-    self.needsDisplay = true if my_frame.size.height != my_height 
+    # self.needsDisplay = true if my_frame.size.height != my_height 
 
     y_position = 0;
 
@@ -28,10 +32,10 @@ class RowsView < OSX::NSView
       new_row_frame.size.height = 30 # old_row_frame.size.height
 
       row.setFrame(new_row_frame)
-      row.needsDisplay = true
+      # row.needsDisplay = true
 
-      log("subview being layed out to: y:     #{new_row_frame.origin.y}        x: #{new_row_frame.origin.x}")
-      log("subview being layed out to: width: #{new_row_frame.size.width} height: #{new_row_frame.size.height}")
+      # log("subview being layed out to: y:     #{new_row_frame.origin.y}        x: #{new_row_frame.origin.x}")
+      # log("subview being layed out to: width: #{new_row_frame.size.width} height: #{new_row_frame.size.height}")
       
       y_position += new_row_frame.size.height
     end
@@ -49,17 +53,18 @@ class RowsView < OSX::NSView
   def drawRect(rect)
     performLayout # if @layout_needed
     super_drawRect(rect)
+
+    Color.colorFromHexRGB('A9ADB7').set
+    OSX::NSBezierPath.fillRect(self.bounds)
   end
   
   private #################################################################
 
   def create_row_view(ticket)    
-    row_view = TicketView.alloc.init
-    loaded = NSBundle.loadNibNamed_owner('TicketView', row_view)
-    
-    log("loaded: #{loaded}, subviews: #{row_view.subviews.map {|v| v.class.name }.join(', ')}")
-    row_view.ticket = ticket
-    row_view
+    controller = TicketController.alloc.init
+    loaded = NSBundle.loadNibNamed_owner('TicketView', controller)
+    controller.ticket = ticket
+    controller.view
   end
     
   def log(msg)

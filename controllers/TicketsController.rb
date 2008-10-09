@@ -37,7 +37,7 @@ class TicketsController < ActiveRecordSetController
     self.content = @tickets
         
     @tickets.each do |ticket|
-      log "ticket.class = #{ticket.class.name}"
+      # log "ticket.class = #{ticket.class.name}"
       @view.add_row_for_ticket(ticket)
     end
     

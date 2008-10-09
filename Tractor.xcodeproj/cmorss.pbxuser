@@ -21,7 +21,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					492,
+					237,
 					20,
 					48,
 					43,
@@ -43,7 +43,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					679,
+					197,
 					60,
 					20,
 					48,
@@ -218,6 +218,12 @@
 			36FA39D90E9C3E9A005E1EEA /* PBXTextBookmark */ = 36FA39D90E9C3E9A005E1EEA /* PBXTextBookmark */;
 			36FA3A2B0E9D6352005E1EEA /* PBXTextBookmark */ = 36FA3A2B0E9D6352005E1EEA /* PBXTextBookmark */;
 			36FA3A2C0E9D6352005E1EEA /* PBXTextBookmark */ = 36FA3A2C0E9D6352005E1EEA /* PBXTextBookmark */;
+			36FA3A580E9D69EC005E1EEA /* PBXTextBookmark */ = 36FA3A580E9D69EC005E1EEA /* PBXTextBookmark */;
+			36FA3A590E9D69EC005E1EEA /* PBXTextBookmark */ = 36FA3A590E9D69EC005E1EEA /* PBXTextBookmark */;
+			36FA3A5A0E9D69EC005E1EEA /* PBXTextBookmark */ = 36FA3A5A0E9D69EC005E1EEA /* PBXTextBookmark */;
+			36FA3A5B0E9D69EC005E1EEA /* PBXTextBookmark */ = 36FA3A5B0E9D69EC005E1EEA /* PBXTextBookmark */;
+			36FA3A5C0E9D69EC005E1EEA /* PBXTextBookmark */ = 36FA3A5C0E9D69EC005E1EEA /* PBXTextBookmark */;
+			36FA3A7F0E9D7085005E1EEA /* PBXTextBookmark */ = 36FA3A7F0E9D7085005E1EEA /* PBXTextBookmark */;
 		};
 		sourceControlManager = 363C0E020E775BF00094CCD7 /* Source Control */;
 		userBuildSettings = {
@@ -1306,9 +1312,9 @@
 	};
 	36FA38960E943B47005E1EEA /* TicketCollectionViewItem.rb */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {682, 480}}";
+			sepNavIntBoundsRect = "{{0, 0}, {525, 600}}";
 			sepNavSelRange = "{510, 0}";
-			sepNavVisRange = "{0, 500}";
+			sepNavVisRange = "{248, 271}";
 		};
 	};
 	36FA38B80E9537F0005E1EEA /* CollectionView.h */ = {
@@ -1320,7 +1326,7 @@
 	};
 	36FA38B90E9537F0005E1EEA /* CollectionView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1194, 21140}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1194, 21200}}";
 			sepNavSelRange = "{27396, 0}";
 			sepNavVisRange = "{6441, 603}";
 			sepNavWindowFrame = "{{61, 276}, {1022, 855}}";
@@ -1339,8 +1345,9 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 256;
-		modificationTime = 245195591.873623;
-		state = 0;
+		location = Tractor;
+		modificationTime = 245204962.666931;
+		state = 1;
 	};
 	36FA392F0E99774C005E1EEA /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -1705,8 +1712,9 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 236;
-		modificationTime = 245195591.894272;
-		state = 0;
+		location = Tractor;
+		modificationTime = 245204962.671009;
+		state = 1;
 	};
 	36FA395B0E997CF6005E1EEA /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -2079,6 +2087,73 @@
 		rType = 0;
 		vrLen = 454;
 		vrLoc = 3;
+	};
+	36FA3A560E9D697E005E1EEA /* TicketController.rb */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {471, 340}}";
+			sepNavSelRange = "{272, 0}";
+			sepNavVisRange = "{0, 203}";
+		};
+	};
+	36FA3A580E9D69EC005E1EEA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 36FA38960E943B47005E1EEA /* TicketCollectionViewItem.rb */;
+		name = "TicketCollectionViewItem.rb: 25";
+		rLen = 0;
+		rLoc = 510;
+		rType = 0;
+		vrLen = 271;
+		vrLoc = 248;
+	};
+	36FA3A590E9D69EC005E1EEA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 36FA3A560E9D697E005E1EEA /* TicketController.rb */;
+		name = "TicketController.rb: 14";
+		rLen = 0;
+		rLoc = 225;
+		rType = 0;
+		vrLen = 221;
+		vrLoc = 0;
+	};
+	36FA3A5A0E9D69EC005E1EEA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 36FA3A560E9D697E005E1EEA /* TicketController.rb */;
+		name = "TicketController.rb: 14";
+		rLen = 0;
+		rLoc = 225;
+		rType = 0;
+		vrLen = 221;
+		vrLoc = 0;
+	};
+	36FA3A5B0E9D69EC005E1EEA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 36FA38960E943B47005E1EEA /* TicketCollectionViewItem.rb */;
+		name = "TicketCollectionViewItem.rb: 25";
+		rLen = 0;
+		rLoc = 510;
+		rType = 0;
+		vrLen = 271;
+		vrLoc = 248;
+	};
+	36FA3A5C0E9D69EC005E1EEA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 36FA3A560E9D697E005E1EEA /* TicketController.rb */;
+		name = "TicketController.rb: 14";
+		rLen = 0;
+		rLoc = 225;
+		rType = 0;
+		vrLen = 221;
+		vrLoc = 0;
+	};
+	36FA3A7F0E9D7085005E1EEA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 36FA3A560E9D697E005E1EEA /* TicketController.rb */;
+		name = "TicketController.rb: 18";
+		rLen = 0;
+		rLoc = 272;
+		rType = 0;
+		vrLen = 204;
+		vrLoc = 0;
 	};
 	4DDCA7030ACC9A6100E082CE /* Tractor */ = {
 		activeExec = 0;

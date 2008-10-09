@@ -18,7 +18,7 @@
 		<object class="NSMutableArray" key="IBDocument.RootObjects" id="1000">
 			<bool key="EncodedWithXMLCoder">YES</bool>
 			<object class="NSCustomObject" id="1001">
-				<string key="NSClassName">TicketView</string>
+				<string key="NSClassName">TicketController</string>
 			</object>
 			<object class="NSCustomObject" id="1003">
 				<string key="NSClassName">FirstResponder</string>
@@ -34,7 +34,7 @@
 					<object class="NSTextField" id="194829145">
 						<reference key="NSNextResponder" ref="139938910"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{30, 7}, {48, 14}}</string>
+						<string key="NSFrame">{{21, 6}, {41, 14}}</string>
 						<reference key="NSSuperview" ref="139938910"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="94710881">
@@ -70,7 +70,7 @@
 					<object class="NSTextField" id="699126672">
 						<reference key="NSNextResponder" ref="139938910"/>
 						<int key="NSvFlags">266</int>
-						<string key="NSFrame">{{145, 7}, {339, 14}}</string>
+						<string key="NSFrame">{{122, 6}, {454, 14}}</string>
 						<reference key="NSSuperview" ref="139938910"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="562069853">
@@ -86,7 +86,7 @@
 					<object class="NSTextField" id="149612015">
 						<reference key="NSNextResponder" ref="139938910"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{18, 7}, {20, 14}}</string>
+						<string key="NSFrame">{{14, 6}, {11, 14}}</string>
 						<reference key="NSSuperview" ref="139938910"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="789328093">
@@ -102,7 +102,7 @@
 					<object class="NSTextField" id="632327822">
 						<reference key="NSNextResponder" ref="139938910"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{64, 7}, {70, 14}}</string>
+						<string key="NSFrame">{{61, 6}, {58, 14}}</string>
 						<reference key="NSSuperview" ref="139938910"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="96873046">
@@ -115,58 +115,15 @@
 							<reference key="NSTextColor" ref="473770498"/>
 						</object>
 					</object>
-					<object class="NSButton" id="152591715">
-						<reference key="NSNextResponder" ref="139938910"/>
-						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{593, -1}, {96, 32}}</string>
-						<reference key="NSSuperview" ref="139938910"/>
-						<bool key="NSEnabled">YES</bool>
-						<object class="NSButtonCell" key="NSCell" id="1008360813">
-							<int key="NSCellFlags">67239424</int>
-							<int key="NSCellFlags2">134217728</int>
-							<string key="NSContents">Blah</string>
-							<object class="NSFont" key="NSSupport">
-								<string key="NSName">LucidaGrande</string>
-								<double key="NSSize">1.300000e+01</double>
-								<int key="NSfFlags">1044</int>
-							</object>
-							<reference key="NSControlView" ref="152591715"/>
-							<int key="NSButtonFlags">-2038284033</int>
-							<int key="NSButtonFlags2">129</int>
-							<string key="NSAlternateContents"/>
-							<string key="NSKeyEquivalent"/>
-							<int key="NSPeriodicDelay">200</int>
-							<int key="NSPeriodicInterval">25</int>
-						</object>
-					</object>
 				</object>
-				<string key="NSFrameSize">{703, 27}</string>
+				<string key="NSFrameSize">{703, 26}</string>
 				<reference key="NSSuperview"/>
-				<string key="NSClassName">NSView</string>
-			</object>
-			<object class="NSUserDefaultsController" id="740013905">
-				<bool key="NSSharedInstance">YES</bool>
+				<string key="NSClassName">TicketView</string>
 			</object>
 		</object>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
 			<object class="NSMutableArray" key="connectionRecords">
 				<bool key="EncodedWithXMLCoder">YES</bool>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">idField</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="194829145"/>
-					</object>
-					<int key="connectionID">13</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">summaryField</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="699126672"/>
-					</object>
-					<int key="connectionID">14</int>
-				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
 						<string key="label">value: ticket.ticket_id</string>
@@ -184,6 +141,30 @@
 					<int key="connectionID">18</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">view</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="139938910"/>
+					</object>
+					<int key="connectionID">33</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">idField</string>
+						<reference key="source" ref="139938910"/>
+						<reference key="destination" ref="194829145"/>
+					</object>
+					<int key="connectionID">34</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">summaryField</string>
+						<reference key="source" ref="139938910"/>
+						<reference key="destination" ref="699126672"/>
+					</object>
+					<int key="connectionID">35</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
 						<string key="label">value: ticket.summary</string>
 						<reference key="source" ref="699126672"/>
@@ -197,7 +178,23 @@
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
-					<int key="connectionID">27</int>
+					<int key="connectionID">36</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: ticket.owner</string>
+						<reference key="source" ref="632327822"/>
+						<reference key="destination" ref="1001"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="632327822"/>
+							<reference key="NSDestination" ref="1001"/>
+							<string key="NSLabel">value: ticket.owner</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">ticket.owner</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">37</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -234,11 +231,10 @@
 						<reference key="object" ref="139938910"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="194829145"/>
 							<reference ref="699126672"/>
 							<reference ref="632327822"/>
 							<reference ref="149612015"/>
-							<reference ref="152591715"/>
+							<reference ref="194829145"/>
 						</object>
 						<reference key="parent" ref="1002"/>
 					</object>
@@ -298,25 +294,6 @@
 						<reference key="object" ref="94710881"/>
 						<reference key="parent" ref="194829145"/>
 					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">15</int>
-						<reference key="object" ref="740013905"/>
-						<reference key="parent" ref="1002"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">28</int>
-						<reference key="object" ref="152591715"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="1008360813"/>
-						</object>
-						<reference key="parent" ref="139938910"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">29</int>
-						<reference key="object" ref="1008360813"/>
-						<reference key="parent" ref="152591715"/>
-					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -333,8 +310,6 @@
 					<string>2.IBViewIntegration.shadowColor</string>
 					<string>2.IBViewIntegration.shadowOffsetHeight</string>
 					<string>2.IBViewIntegration.shadowOffsetWidth</string>
-					<string>28.IBPluginDependency</string>
-					<string>29.IBPluginDependency</string>
 					<string>3.IBPluginDependency</string>
 					<string>4.IBPluginDependency</string>
 					<string>4.IBViewIntegration.shadowBlurRadius</string>
@@ -353,14 +328,12 @@
 					<string>com.apple.InterfaceBuilderKit</string>
 					<string>com.apple.InterfaceBuilderKit</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{510, 436}, {703, 27}}</string>
+					<string>{{-1231, 671}, {703, 26}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<real value="0.000000e+00" id="698917451"/>
 					<reference ref="778694568"/>
 					<reference ref="698917451"/>
 					<real value="3.000000e+00"/>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<reference ref="698917451"/>
@@ -394,7 +367,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">29</int>
+			<int key="maxID">37</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -418,6 +391,18 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">TRTicketView.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">TicketController</string>
+					<string key="superclassName">NSObjectController</string>
+					<object class="NSMutableDictionary" key="outlets">
+						<string key="NS.key.0">view</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">controllers/TicketController.rb</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">

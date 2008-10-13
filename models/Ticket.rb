@@ -19,9 +19,6 @@
 #   :keywords
 require 'xmlrpc/client'
 
-class TicketProxy < ActiveRecordProxy
-end
-
 class Ticket < ActiveRecord::Base
 
   belongs_to :repository
@@ -116,12 +113,30 @@ class Ticket < ActiveRecord::Base
     def load_from_cache(id)
       Cache.get(id)
     end
+    
+    def observable(*attrs)
+      attr_reader(:dirty)
+            
+      Array(attrs).each do |attr|
+        define_method("#{attr}=") do |*args|
+          old_value = send(attr)
+          super
+          @dirty = true
+          (@observers || []).each {|o| o.observed_changed(self, attr, args.first, old_value)}        
+        end      
+      end
+      
+      define_method(:add_observer) do |observer|
+        (@observers ||= []) << observer
+      end
+
+      define_method(:remove_observers) do
+        @observers = nil
+      end
+    end
   end
 
-  def ticket_id
-    puts "ticket_id accessed #{super}"
-    super
-  end
+  observable :ticket_id, :summary, :owner
   
 	def init(opts)
 	  super
@@ -134,5 +149,5 @@ class Ticket < ActiveRecord::Base
     attrs.keys.each do |attr|
       send("#{attr.to_sym}=", attrs[attr])
     end
-  end
+  end    
 end

@@ -33,19 +33,19 @@ class TicketsController < ActiveRecordSetController
   	  
   def refresh(sender)
     # repository.sync_tickets
-    @tickets = repository.tickets.find(:all, :limit => 10).to_activerecord_proxies
+    @tickets = repository.tickets.find(:all, :limit => 10, :order => 'ticket_id')
     self.content = @tickets
         
     @tickets.each do |ticket|
-      # log "ticket.class = #{ticket.class.name}"
-      @view.add_row_for_ticket(ticket)
+      @view.add_or_update_row_for_ticket(ticket) 
     end
     
     @view.display
   end
 
   def do_foo(sender)
-    @tickets.each {|t| t.ticket_id = 'foo'}
+    @tickets.each {|t| t.ticket_id = 456}
+    @view.display
   end
   
   private #################################################################

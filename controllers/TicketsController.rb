@@ -16,6 +16,7 @@ class TicketsController < ActiveRecordSetController
 	ib_action :do_foo
 	
 	kvc_accessor :tickets
+  attr_writer :conditions
   
   def init
     if super_init
@@ -30,12 +31,27 @@ class TicketsController < ActiveRecordSetController
   def repository 
     AppController.instance.repository
   end
-  	  
-  def refresh(sender)
-    # repository.sync_tickets
-    @tickets = repository.tickets.find(:all, :limit => 10, :order => 'ticket_id')
-    self.content = @tickets
+  
+  def ticket_collection
+    return @ticket_collection if @ticket_collection
+    @ticket_collection = AppController.instance.ticket_collection
+    @ticket_collection.add_observer(self)
+  end
+  
+  def conditions
+    @conditions
+  end
+  
+  def refresh(sender = nil)  
+    opts = { :order => 'ticket_id', :limit => 300 }    
+    opts[:conditions] = @conditions if @conditions && !@conditions.empty?
+    
+    log("Options = #{opts.inspect}")
+    @tickets = repository.tickets.find(:all, opts)
         
+    self.content = @tickets
+    @view.clear
+    
     @tickets.each do |ticket|
       @view.add_or_update_row_for_ticket(ticket) 
     end

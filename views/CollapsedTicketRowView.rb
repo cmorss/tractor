@@ -11,7 +11,7 @@ require 'osx/cocoa'
 class CollapsedTicketRowView <  NSView
   ib_outlets :controller, :id_field, :summary_field, :owner_field
   attr_reader :controller, :id_field, :summary_field, :owner_field
-  
+
   attr_accessor  :selected
 	kvc_accessor :ticket
 
@@ -22,6 +22,7 @@ class CollapsedTicketRowView <  NSView
       @gradient = {}
       @gradient['background'] = create_gradient('F0F0F0', 'FFFFFF')
       @gradient['selected'] = create_gradient('D2D7E8', 'E4EAFB')
+      @gradient['grey'] = create_gradient( '969696', 'C4C4C4')
 
       @gradient  
     end
@@ -33,7 +34,7 @@ class CollapsedTicketRowView <  NSView
       @colors['critical'] = Color.colorFromHexRGB('E08037')
       @colors['major']    = Color.colorFromHexRGB('FFE676')
       @colors['minor']    = Color.colorFromHexRGB('EED56C')      
-      @colors['trivial']  = Color.colorFromHexRGB('FFFFFF')    
+      @colors['trivial']  = Color.colorFromHexRGB('EEAACC')    
       @colors
     end
     
@@ -89,10 +90,9 @@ class CollapsedTicketRowView <  NSView
     self.summary_field.dealloc if self.summary_field
     ticket = nil
   end
-  
+ 
   def drawRect(rect)
     super_drawRect(rect)
-        
     clipShape = OSX::NSBezierPath.bezierPath;
     box = OSX::NSRect.new(bounds.x + 10, bounds.y + 1, bounds.width - 30, bounds.height)
 
@@ -100,13 +100,13 @@ class CollapsedTicketRowView <  NSView
     
     log "redrawing for ticket: #{@ticket.ticket_id}"
     clipShape.appendBezierPathWithRoundedRect_xRadius_yRadius(box, 5, 5)
-    TicketView.gradient[@selected ? 'selected' : 'background'].drawInBezierPath_angle(clipShape,90.0)
+    CollapsedTicketRowView.gradient[@selected ? 'selected' : 'background'].drawInBezierPath_angle(clipShape,90.0)
  
     # Draw the priority
     box = OSX::NSRect.new(bounds.x + box.width + 3, box.y + 2, 6, box.height - 4)
     clipShape = OSX::NSBezierPath.bezierPath;
     clipShape.appendBezierPathWithRoundedRect_xRadius_yRadius(box, 5, 5)
-    TicketView.colors[@ticket.priority || 'minor'].set
+    CollapsedTicketRowView.colors[@ticket.priority || 'minor'].set
     clipShape.fill    
   end
   

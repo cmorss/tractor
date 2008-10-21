@@ -2,10 +2,34 @@
 class MetadataPresenter
   
   def initialize(repository)
+    @repository = repository
+    load
+  end
+  
+  def load
     @root_elements = [
-      MetadataCollection.alloc.init_with_label_and_collection('MILESTONES', repository.milestones.to_a),
-      MetadataCollection.alloc.init_with_label_and_collection('PRIORITIES', repository.priorities.to_a)
+      MetadataCollection.alloc.init_with_label_and_collection(
+        :version, @repository.versions(true).to_a),
+
+      MetadataCollection.alloc.init_with_label_and_collection(
+        :owner, @repository.owners(true).to_a),
+
+      MetadataCollection.alloc.init_with_label_and_collection(
+        :reporter, @repository.reporters(true).to_a),
+        
+      MetadataCollection.alloc.init_with_label_and_collection(
+        :milestone, @repository.milestones(true).select{|m| !m.completed? }.to_a),
+        
+      MetadataCollection.alloc.init_with_label_and_collection(
+        :priority, @repository.priorities(true).to_a)
     ]
+  end
+
+  def update_stats(attribute, stats)
+    collection = @root_elements.detect{|e| e.attribute == attribute}
+     collection.children.each do |e|
+      e.statistics = stats[e.element.name]
+    end
   end
   
   def clear
@@ -19,11 +43,7 @@ class MetadataPresenter
   end
   
   def number_of_children_for_element(item)
-    $stderr.puts("number_of_children_for_element: #{item.inspect}")
     item.children.size
-  end
-  
-  def statistics_for_element(item)
   end
   
   def child_of_item(index, item)
@@ -36,13 +56,11 @@ class MetadataPresenter
 end
 
 class MetadataCollection < OSX::NSObject
-  
-  attr_accessor :label
-  
+    
   def init_with_label_and_collection(label, collection)
     @label = label
     @collection = collection.map do |d| 
-      MetadataElement.alloc.init_with_element(d)
+      MetadataElement.alloc.init_with_element(d, label)
     end
     self
   end
@@ -50,10 +68,19 @@ class MetadataCollection < OSX::NSObject
   def statistics
     nil
   end
+
+  def attribute
+    @label
+  end
+  
+  def label
+    @label.to_s.upcase
+  end
   
   def expandable?
     true
   end
+  alias_method :kind?, :expandable?
   
   def children
     @collection
@@ -65,22 +92,24 @@ class MetadataCollection < OSX::NSObject
 end
 
 class MetadataElement < OSX::NSObject
-  attr_accessor :element
+  attr_accessor :element, :attribute_name, :statistics
     
-  def init_with_element(element)
+  def init_with_element(element, attribute_name)
+    @attribute_name = attribute_name
     @element = element
     self
-  end
-  
-  def statistics
-    3
   end
   
   def expandable?
     false
   end
+  alias_method :kind?, :expandable?
   
   def label
+    @element.name.to_s
+  end
+  
+  def name
     @element.name
   end
 end

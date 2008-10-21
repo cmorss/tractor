@@ -2,10 +2,19 @@ class TicketRowsView < OSX::NSView
 	ib_outlet :delegate
   ib_outlet   :expanded_ticket_row_view
   attr_reader :expanded_ticket_row_view
+  attr_accessor :layout_needed
   
   def init
     super_init
     @layout_needed = true
+  end
+  
+  def awakeFromNib
+    notificationCenter = OSX::NSNotificationCenter.defaultCenter
+    
+    notificationCenter.addObserver_selector_name_object(
+      self, :expanded_view_resized, 
+      'expanded_view_resized', nil)
   end
 
   def isFlipped
@@ -19,6 +28,7 @@ class TicketRowsView < OSX::NSView
       my_height +=  row.preferred_height
     end
 
+    # log "performLayout: setting frame size in performLayout to width: #{my_frame.size.width}, height: #{[my_height, superview.frame.size.height].max}"
     setFrameSize(OSX::NSMakeSize(my_frame.size.width, [my_height, superview.frame.size.height].max))
     y_position = 0;
 
@@ -31,11 +41,10 @@ class TicketRowsView < OSX::NSView
       new_row_frame.size.height = row.preferred_height
 
       row.setFrame(new_row_frame)
-      # row.needsDisplay = true
+      row.perform_layout
 
       # log("subview being layed out to: y:     #{new_row_frame.origin.y}        x: #{new_row_frame.origin.x}")
       # log("subview being layed out to: width: #{new_row_frame.size.width} height: #{new_row_frame.size.height}")
-
       y_position += new_row_frame.size.height
     end
 
@@ -55,8 +64,14 @@ class TicketRowsView < OSX::NSView
     @layout_needed = true
   end
 
+  def expanded_view_resized(notification)
+    @layout_needed = true
+    setNeedsDisplay(true)
+  end
+  
   def drawRect(rect)
-    performLayout # if @layout_needed
+    # log("drawRect: rect.origin.y: #{rect.origin.y}")
+    performLayout if @layout_needed
     super_drawRect(rect)
 
     Color.colorFromHexRGB('A9ADB7').set
@@ -69,6 +84,12 @@ class TicketRowsView < OSX::NSView
     @expanded_holder = holders[ticket.id]
     @expanded_holder.controller.expand(expanded_ticket_row_view)
     setNeedsDisplay(true)
+  end
+  
+  def clear
+    @holders = {}
+    @expanded_holder = nil
+    subviews.to_a.each {|v|v.removeFromSuperview}
   end
   
   def left_click_on_row(ticket_controller, event)
@@ -133,7 +154,7 @@ class TicketRowsView < OSX::NSView
 
   def holders
     @holders ||= {}
-  end
+  end  
 
   def log(msg)
     $stderr.puts msg

@@ -16,11 +16,20 @@
 		3603DF630E898A01004CBA2B /* treeview.rb in Resources */ = {isa = PBXBuildFile; fileRef = 3603DF600E898A01004CBA2B /* treeview.rb */; };
 		3603DF870E8DBE14004CBA2B /* CollapsedTicketRowView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 3603DF860E8DBE14004CBA2B /* CollapsedTicketRowView.rb */; };
 		3603DF8C0E8DC3E9004CBA2B /* TicketsView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 3603DF8B0E8DC3E9004CBA2B /* TicketsView.rb */; };
+		361E06290EAD68F300EEAF8A /* TicketWindow.rb in Resources */ = {isa = PBXBuildFile; fileRef = 361E06280EAD68F300EEAF8A /* TicketWindow.rb */; };
+		361E062B0EAD6A3A00EEAF8A /* TicketWindowView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 361E062A0EAD6A3A00EEAF8A /* TicketWindowView.rb */; };
 		3635DA120E7CB46F00AF50A0 /* Hash.rb in Resources */ = {isa = PBXBuildFile; fileRef = 3635DA110E7CB46F00AF50A0 /* Hash.rb */; };
 		3635DA8F0E7DAB6100AF50A0 /* Repository.rb in Resources */ = {isa = PBXBuildFile; fileRef = 3635DA8D0E7DAB6100AF50A0 /* Repository.rb */; };
 		3635DA900E7DAB6100AF50A0 /* Ticket.rb in Resources */ = {isa = PBXBuildFile; fileRef = 3635DA8E0E7DAB6100AF50A0 /* Ticket.rb */; };
 		363C0E0C0E7762DD0094CCD7 /* Trac.rb in Resources */ = {isa = PBXBuildFile; fileRef = 363C0E0B0E7762DD0094CCD7 /* Trac.rb */; };
 		363C0E390E789A240094CCD7 /* Cache.rb in Resources */ = {isa = PBXBuildFile; fileRef = 363C0E380E789A240094CCD7 /* Cache.rb */; };
+		365FDD250EA668270065046F /* TicketCollection.rb in Resources */ = {isa = PBXBuildFile; fileRef = 365FDD240EA668270065046F /* TicketCollection.rb */; };
+		365FDD270EA6695C0065046F /* Observable.rb in Resources */ = {isa = PBXBuildFile; fileRef = 365FDD260EA6695C0065046F /* Observable.rb */; };
+		365FDD5F0EA6C2C20065046F /* Owner.rb in Resources */ = {isa = PBXBuildFile; fileRef = 365FDD5E0EA6C2C20065046F /* Owner.rb */; };
+		365FDD610EA6C2D90065046F /* Reporter.rb in Resources */ = {isa = PBXBuildFile; fileRef = 365FDD600EA6C2D90065046F /* Reporter.rb */; };
+		365FDD6B0EA806660065046F /* IFVerticallyExpandingTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 365FDD690EA806660065046F /* IFVerticallyExpandingTextField.h */; };
+		365FDD6C0EA806660065046F /* IFVerticallyExpandingTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 365FDD6A0EA806660065046F /* IFVerticallyExpandingTextField.m */; };
+		365FDD6F0EA80F610065046F /* ExpandingTextField.rb in Resources */ = {isa = PBXBuildFile; fileRef = 365FDD6E0EA80F610065046F /* ExpandingTextField.rb */; };
 		368C14C30E8097A500D4C5A9 /* migrate in Resources */ = {isa = PBXBuildFile; fileRef = 368C14C00E8097A500D4C5A9 /* migrate */; };
 		36CD18D90E81EB49005C0AED /* Component.rb in Resources */ = {isa = PBXBuildFile; fileRef = 36CD18D10E81EB49005C0AED /* Component.rb */; };
 		36CD18DA0E81EB49005C0AED /* Milestone.rb in Resources */ = {isa = PBXBuildFile; fileRef = 36CD18D20E81EB49005C0AED /* Milestone.rb */; };
@@ -35,8 +44,8 @@
 		36CD1A570E86C606005C0AED /* TicketsController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 36CD1A550E86C606005C0AED /* TicketsController.rb */; };
 		36CD1A5A0E86C62E005C0AED /* MetadataPresenter.rb in Resources */ = {isa = PBXBuildFile; fileRef = 36CD1A590E86C62E005C0AED /* MetadataPresenter.rb */; };
 		36E5BD690EA2B61E00A7DBFB /* TicketRowContainerView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 36E5BD680EA2B61E00A7DBFB /* TicketRowContainerView.rb */; };
+		36E5BD7F0EA4F1CB00A7DBFB /* RoundedTextFieldCell.rb in Resources */ = {isa = PBXBuildFile; fileRef = 36E5BD7E0EA4F1CB00A7DBFB /* RoundedTextFieldCell.rb */; };
 		36FA386D0E930FAE005E1EEA /* TicketsCollectionView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 36FA386C0E930FAE005E1EEA /* TicketsCollectionView.rb */; };
-		36FA38700E931163005E1EEA /* SelectedTicketView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 36FA386F0E931163005E1EEA /* SelectedTicketView.rb */; };
 		36FA38750E93ED08005E1EEA /* Color.h in Headers */ = {isa = PBXBuildFile; fileRef = 36FA38730E93ED08005E1EEA /* Color.h */; };
 		36FA38760E93ED08005E1EEA /* Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FA38740E93ED08005E1EEA /* Color.m */; };
 		36FA38BC0E9537F0005E1EEA /* CollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 36FA38B80E9537F0005E1EEA /* CollectionView.h */; };
@@ -83,11 +92,20 @@
 		3603DF600E898A01004CBA2B /* treeview.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = treeview.rb; sourceTree = "<group>"; };
 		3603DF860E8DBE14004CBA2B /* CollapsedTicketRowView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = CollapsedTicketRowView.rb; sourceTree = "<group>"; };
 		3603DF8B0E8DC3E9004CBA2B /* TicketsView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = TicketsView.rb; sourceTree = "<group>"; };
+		361E06280EAD68F300EEAF8A /* TicketWindow.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = TicketWindow.rb; sourceTree = "<group>"; };
+		361E062A0EAD6A3A00EEAF8A /* TicketWindowView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = TicketWindowView.rb; sourceTree = "<group>"; };
 		3635DA110E7CB46F00AF50A0 /* Hash.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Hash.rb; sourceTree = "<group>"; };
 		3635DA8D0E7DAB6100AF50A0 /* Repository.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Repository.rb; sourceTree = "<group>"; };
 		3635DA8E0E7DAB6100AF50A0 /* Ticket.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Ticket.rb; sourceTree = "<group>"; };
 		363C0E0B0E7762DD0094CCD7 /* Trac.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Trac.rb; sourceTree = "<group>"; };
 		363C0E380E789A240094CCD7 /* Cache.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Cache.rb; sourceTree = "<group>"; };
+		365FDD240EA668270065046F /* TicketCollection.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = TicketCollection.rb; sourceTree = "<group>"; };
+		365FDD260EA6695C0065046F /* Observable.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Observable.rb; sourceTree = "<group>"; };
+		365FDD5E0EA6C2C20065046F /* Owner.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Owner.rb; sourceTree = "<group>"; };
+		365FDD600EA6C2D90065046F /* Reporter.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Reporter.rb; sourceTree = "<group>"; };
+		365FDD690EA806660065046F /* IFVerticallyExpandingTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFVerticallyExpandingTextField.h; sourceTree = "<group>"; };
+		365FDD6A0EA806660065046F /* IFVerticallyExpandingTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFVerticallyExpandingTextField.m; sourceTree = "<group>"; };
+		365FDD6E0EA80F610065046F /* ExpandingTextField.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = ExpandingTextField.rb; sourceTree = "<group>"; };
 		368C14C00E8097A500D4C5A9 /* migrate */ = {isa = PBXFileReference; lastKnownFileType = folder; path = migrate; sourceTree = "<group>"; };
 		36CD18D10E81EB49005C0AED /* Component.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Component.rb; sourceTree = "<group>"; };
 		36CD18D20E81EB49005C0AED /* Milestone.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Milestone.rb; sourceTree = "<group>"; };
@@ -102,8 +120,8 @@
 		36CD1A550E86C606005C0AED /* TicketsController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = TicketsController.rb; sourceTree = "<group>"; };
 		36CD1A590E86C62E005C0AED /* MetadataPresenter.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = MetadataPresenter.rb; sourceTree = "<group>"; };
 		36E5BD680EA2B61E00A7DBFB /* TicketRowContainerView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = TicketRowContainerView.rb; sourceTree = "<group>"; };
+		36E5BD7E0EA4F1CB00A7DBFB /* RoundedTextFieldCell.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = RoundedTextFieldCell.rb; sourceTree = "<group>"; };
 		36FA386C0E930FAE005E1EEA /* TicketsCollectionView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = TicketsCollectionView.rb; sourceTree = "<group>"; };
-		36FA386F0E931163005E1EEA /* SelectedTicketView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = SelectedTicketView.rb; sourceTree = "<group>"; };
 		36FA38730E93ED08005E1EEA /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
 		36FA38740E93ED08005E1EEA /* Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Color.m; sourceTree = "<group>"; };
 		36FA38B80E9537F0005E1EEA /* CollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionView.h; sourceTree = "<group>"; };
@@ -246,6 +264,10 @@
 				36CD18D80E81EB49005C0AED /* Version.rb */,
 				3635DA8D0E7DAB6100AF50A0 /* Repository.rb */,
 				3635DA8E0E7DAB6100AF50A0 /* Ticket.rb */,
+				365FDD240EA668270065046F /* TicketCollection.rb */,
+				365FDD260EA6695C0065046F /* Observable.rb */,
+				365FDD5E0EA6C2C20065046F /* Owner.rb */,
+				365FDD600EA6C2D90065046F /* Reporter.rb */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -272,8 +294,13 @@
 				3603DF860E8DBE14004CBA2B /* CollapsedTicketRowView.rb */,
 				3603DF8B0E8DC3E9004CBA2B /* TicketsView.rb */,
 				36FA386C0E930FAE005E1EEA /* TicketsCollectionView.rb */,
-				36FA386F0E931163005E1EEA /* SelectedTicketView.rb */,
 				36E5BD680EA2B61E00A7DBFB /* TicketRowContainerView.rb */,
+				36E5BD7E0EA4F1CB00A7DBFB /* RoundedTextFieldCell.rb */,
+				365FDD690EA806660065046F /* IFVerticallyExpandingTextField.h */,
+				365FDD6A0EA806660065046F /* IFVerticallyExpandingTextField.m */,
+				365FDD6E0EA80F610065046F /* ExpandingTextField.rb */,
+				361E06280EAD68F300EEAF8A /* TicketWindow.rb */,
+				361E062A0EAD6A3A00EEAF8A /* TicketWindowView.rb */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -289,6 +316,7 @@
 				3603DF5B0E898870004CBA2B /* ImageAndTextCell.h in Headers */,
 				36FA38750E93ED08005E1EEA /* Color.h in Headers */,
 				36FA38BC0E9537F0005E1EEA /* CollectionView.h in Headers */,
+				365FDD6B0EA806660065046F /* IFVerticallyExpandingTextField.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,7 +392,6 @@
 				3603DF870E8DBE14004CBA2B /* CollapsedTicketRowView.rb in Resources */,
 				3603DF8C0E8DC3E9004CBA2B /* TicketsView.rb in Resources */,
 				36FA386D0E930FAE005E1EEA /* TicketsCollectionView.rb in Resources */,
-				36FA38700E931163005E1EEA /* SelectedTicketView.rb in Resources */,
 				36FA39660E9986B6005E1EEA /* TicketRowsView.rb in Resources */,
 				36FA39DB0E9C40B3005E1EEA /* TicketView.xib in Resources */,
 				36FA3A570E9D697E005E1EEA /* TicketController.rb in Resources */,
@@ -372,6 +399,14 @@
 				36FA3AA00E9E5BB8005E1EEA /* TicketControllerHolder.rb in Resources */,
 				36FA3AA70EA03A30005E1EEA /* ExpandedTicketRowView.rb in Resources */,
 				36E5BD690EA2B61E00A7DBFB /* TicketRowContainerView.rb in Resources */,
+				36E5BD7F0EA4F1CB00A7DBFB /* RoundedTextFieldCell.rb in Resources */,
+				365FDD250EA668270065046F /* TicketCollection.rb in Resources */,
+				365FDD270EA6695C0065046F /* Observable.rb in Resources */,
+				365FDD5F0EA6C2C20065046F /* Owner.rb in Resources */,
+				365FDD610EA6C2D90065046F /* Reporter.rb in Resources */,
+				365FDD6F0EA80F610065046F /* ExpandingTextField.rb in Resources */,
+				361E06290EAD68F300EEAF8A /* TicketWindow.rb in Resources */,
+				361E062B0EAD6A3A00EEAF8A /* TicketWindowView.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +422,7 @@
 				3603DF5C0E898870004CBA2B /* ImageAndTextCell.m in Sources */,
 				36FA38760E93ED08005E1EEA /* Color.m in Sources */,
 				36FA38BD0E9537F0005E1EEA /* CollectionView.m in Sources */,
+				365FDD6C0EA806660065046F /* IFVerticallyExpandingTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

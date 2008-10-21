@@ -1,3 +1,2 @@
-/Users/cmorss/work/TractorApp/TicketView.xib|64|warning: The 'id_field' outlet of 'Expanded Ticket Row View' is connected to 'Static Text (id field)' but 'id_field' is no longer defined on ExpandedTicketRowView.
-/Users/cmorss/work/TractorApp/TicketView.xib|64|warning: The 'summary_field' outlet of 'Expanded Ticket Row View' is connected to 'Text Field (summary field)' but 'summary_field' is no longer defined on ExpandedTicketRowView.
-/Users/cmorss/work/TractorApp/TicketView.xib|64|warning: The 'owner_field' outlet of 'Expanded Ticket Row View' is connected to 'Static Text (owner)' but 'owner_field' is no longer defined on ExpandedTicketRowView.
+/Users/cmorss/work/TractorApp/views/IFVerticallyExpandingTextField.m|111|warning: initialization from distinct Objective-C type
+/Users/cmorss/work/TractorApp/views/IFVerticallyExpandingTextField.m|298|warning: initialization from distinct Objective-C type

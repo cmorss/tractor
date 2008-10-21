@@ -20,10 +20,10 @@
 require 'xmlrpc/client'
 
 class Ticket < ActiveRecord::Base
-
   belongs_to :repository
 
   class << self
+    include Observable
 
     def inheritance_column
       "foo"
@@ -59,16 +59,9 @@ class Ticket < ActiveRecord::Base
         ['ticket.get', ticket_id]
       end
     
-      results = trac.multicall(*calls)
-      log "back in load_multiple_from_trac: results = #{results.size}"
-    
-      r = results.map do |result|
-        log "init of ticket #{result[0].inspect}"
+      trac.multicall(*calls).map do |result|
         Ticket.alloc.init(:id => result[0], :attributes => result[3])      
       end
-    
-      puts "tickets are built: #{r.size}"
-      r
     end
 
     def log(msg)
@@ -112,28 +105,7 @@ class Ticket < ActiveRecord::Base
   
     def load_from_cache(id)
       Cache.get(id)
-    end
-    
-    def observable(*attrs)
-      attr_reader(:dirty)
-            
-      Array(attrs).each do |attr|
-        define_method("#{attr}=") do |*args|
-          old_value = send(attr)
-          super
-          @dirty = true
-          (@observers || []).each {|o| o.observed_changed(self, attr, args.first, old_value)}        
-        end      
-      end
-      
-      define_method(:add_observer) do |observer|
-        (@observers ||= []) << observer
-      end
-
-      define_method(:remove_observers) do
-        @observers = nil
-      end
-    end
+    end    
   end
 
   observable :ticket_id, :summary, :owner

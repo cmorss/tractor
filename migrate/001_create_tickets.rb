@@ -76,6 +76,16 @@ class CreateTickets < ActiveRecord::Migration
       t.column :repository_id, :integer
       t.column :name, :text
     end
+
+    create_table :reporters do |t|
+      t.column :repository_id, :integer
+      t.column :name, :text
+    end
+
+    create_table :owners do |t|
+      t.column :repository_id, :integer
+      t.column :name, :text
+    end
   end
 
   def self.down

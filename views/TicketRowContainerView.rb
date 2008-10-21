@@ -10,7 +10,7 @@ require 'osx/cocoa'
 
 class TicketRowContainerView <  OSX::NSView
   ib_outlets :controller, :collapsed_view
-  attr_accessor :controller, :collapsed_view
+  attr_accessor :controller, :collapsed_view, :notice
   
   def initWithFrame(frame)
     super_initWithFrame(frame)
@@ -21,30 +21,20 @@ class TicketRowContainerView <  OSX::NSView
   def expand(expanded_view)
     @collapsed_view.removeFromSuperview
     addSubview(expanded_view)
+    
     active_view.controller = controller
     active_view.ticket = controller.ticket
     active_view.reload
+    superview.layout_needed = true
   end
   
-  def collapse
-    log("before remove and add")
-    log("collapse.active_view = #{active_view}")
-    log("collapse.@collapsed_view = #{@collapsed_view}")
-    
+  def collapse    
     active_view.removeFromSuperview
     addSubview(@collapsed_view)
-    log("after remove and add")
-    log("collapse.active_view = #{active_view}")
-    log("collapse.@collapsed_view = #{@collapsed_view}")
-
-    # These resizes/origin calls make no difference
-    # active_view.setFrameOrigin(OSX::NSPoint.new(0,0))
-    # active_view.setFrameSize(OSX::NSSize.new(300, active_view.preferred_height))
-
+    
     active_view.controller = controller
     active_view.reload
-    setNeedsDisplay(true)
-    active_view.setNeedsDisplay(true)
+    superview.layout_needed = true
   end
   
   def expanded?
@@ -73,6 +63,11 @@ class TicketRowContainerView <  OSX::NSView
   def preferred_height
     active_view.preferred_height
   end  
+
+  def perform_layout
+    active_view.setFrameOrigin(OSX::NSPoint.new(0,0))
+    active_view.setFrameSize(OSX::NSSize.new(bounds.width, preferred_height))
+  end
   
   def log(msg)
     $stderr.puts msg
